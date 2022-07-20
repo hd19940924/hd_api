@@ -60,7 +60,7 @@ class GetExcel:
     #获取excel里面的所有的数据
     def get_excel_data(self):
         data_list = []
-        for i in range(self.get_rows()):
+        for i in range(self.get_rows()-1):
             data_list.append(self.get_rows_value(i+2))
         return data_list
 
@@ -69,8 +69,8 @@ class GetExcel:
         wb = self.load_excel()  #加载excel
         wr = wb.active  #获取sheet对应对象
         wr.cell(rows, cols, value)
-        wb.save(path + '/Case/testcase.xlsx')
-        #wb.save('D:/yiq/Demo/Case/testcase.xlsx')
+        #wb.save(path + '/Case/testcase.xlsx')
+        wb.save(r'C:\Users\admin\PycharmProjects\hd_api\Case\testcase.xlsx')
 
 excel_data = GetExcel()
 
