@@ -1,0 +1,63 @@
+{
+  "/pub/api/v1/web/web_login": [
+    {
+      "sucess":{
+        "code": 0,
+        "data": {
+          "head_img": "https://xd-video-pc-img.oss-cn-beijing.aliyuncs.com/xdclass_pro/default/head_img/13.jpeg",
+          "name": "hedy",
+          "token": "xdclasseyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ4ZGNsYXNzIiwicm9sZXMiOiIxIiwiaW1nIjoiaHR0cHM6Ly94ZC12aWRlby1wYy1pbWcub3NzLWNuLWJlaWppbmcuYWxpeXVuY3MuY29tL3hkY2xhc3NfcHJvL2RlZmF1bHQvaGVhZF9pbWcvMTMuanBlZyIsImlkIjo2Nzg3MTk1LCJuYW1lIjoiaGVkeSIsImlhdCI6MTYyODY5MTQ4NiwiZXhwIjoxNjI5Mjk2Mjg2fQ.LQvTZmjZoobpce40EvKx8-JHn-zwr9W_XHxh7IJTb_4"},
+        "msg": "None"}
+
+    },
+    {
+      "error":{
+        "code": -1,
+        "data": "None",
+        "msg": "全局异常，未知错误"}
+    }
+  ],
+    "/user/api/v1/favorite/page": [
+    {
+      "sucess":{
+        "code": 0,
+    "data": {
+        "total": 3,
+        "data": [
+            {
+                "id": 49,"title": "小滴课堂全栈/后端高级工程师面试专题第一季","summary": null,"price": 15800,"online": null,"point": 9.7,"level": 4,"hours": null,"cover_img": "https://file.xdclass.net/video/2020/%E9%9D%A2%E8%AF%95%E4%B8%93%E9%A2%98/gw-ms.png","view_num": 91022,"buy_num": 228,"author_id": null,"create_time": "2021-05-24 04:47:15","update_time": null,"old_price": 29891,"c_id": null,"cp_id": null,"learn_base": null,"learn_result": null,"total_episode": null,"record_state": null,"pre_remark": null,"player_order": null,"share": null,"favorite_id": 6368
+            }
+        ],
+        "total_page": 1,
+        "current_page": 1
+    },
+        "msg": "None"}
+    },
+    {
+      "error":{
+        "code": -1,
+        "data": "None",
+        "msg": "全局异常，未知错误"}
+    }
+  ],
+    "/user/api/v1/order/find_orders": [
+    {
+      "sucess":{
+        "code": 0,
+        "data": {
+          "total": 1,
+          "data": [
+            {"id": 577750, "state": 1, "nickname": "hedy", "price": 5900, "hours": 20, "redeemCode": "None", "out_trade_no": "d1b3ea0e30e14287840bad9f898440ab", "create_time": "2021-04-10T10:04:18.000+0000", "head_img": "https://xd-video-pc-img.oss-cn-beijing.aliyuncs.com/xdclass_pro/default/head_img/13.jpeg", "video_id": 55, "video_title": "玩转新版接口自动化测试教程 零基础到设计测试框架", "video_img": "https://file.xdclass.net/video/2021/2-zt/55.jpeg", "user_id": 6787195, "current_episode": 0, "view_num": 37016, "buy_num": 507, "total_episode": 46, "qrcode_url": "None"}
+          ],
+          "total_page": 1,
+          "current_page": 1},
+        "msg": "None"}
+    },
+    {
+      "error":{
+        "code": -1,
+        "data": "None",
+        "msg": "全局异常，未知错误"}
+    }
+  ]
+}
