@@ -7159,67 +7159,63 @@ body.skin-3 {
 
 
     var resultData = {
-    "testPass": 0,
+    "testPass": 1,
     "testResult": [
         {
-            "className": "TestRunCaseDdt",
-            "methodName": "test_main_case1_1___yiqcase_001____登录____yes___None__None____pub_api_v1_web_web_login____post____phone_13612996061_pwd_yiqing0406____yes____yes____mec___None___通过______code___0___data_____head_img____https___xd_video_pc_img_oss_cn_beijing_aliyuncs_com_xdclass_pro_default_head_img_13_jpeg____name____hedy____token____xdclasseyJhbGciOiJIUzI1NiJ9_eyJzdWIiOiJ4ZGNsYXNzIiwicm9sZXMiOiIxIiwiaW1nIjoiaHR0cHM6Ly94ZC12aWRlby1wYy1pbWcub3NzLWNuLWJlaWppbmcuYWxpeXVuY3MuY29tL3hkY2xhc3NfcHJvL2RlZmF1bHQvaGVhZF9pbWcvMTMuanBlZyIsImlkIjo2Nzg3MTk1LCJuYW1lIjoiaGVkeSIsImlhdCI6MTY1ODM2ODA0NiwiZXhwIjoxNjU4OTcyODQ2fQ_5nHESyNHRhbWRvHMeUYZqAX9A_pqiTNH5cJyzy56wTI_____msg___null___",
+            "className": "Test_Verify_Code",
+            "methodName": "test_verify_phone_1",
             "description": null,
-            "spendTime": "0.0399 s",
-            "status": "错误",
+            "spendTime": "0.22 s",
+            "status": "失败",
             "log": [
-                "没有获取到值\n",
+                "======开始执行测试用例======\n======执行测试用例结束======\n",
                 "Traceback (most recent call last):\n",
                 "  File \"C:\\soft\\python\\lib\\unittest\\case.py\", line 59, in testPartExecutor\n    yield\n",
                 "  File \"C:\\soft\\python\\lib\\unittest\\case.py\", line 593, in run\n    self._callTestMethod(testMethod)\n",
                 "  File \"C:\\soft\\python\\lib\\unittest\\case.py\", line 550, in _callTestMethod\n    method()\n",
                 "  File \"C:\\soft\\python\\lib\\site-packages\\ddt.py\", line 191, in wrapper\n    return func(self, *args, **kwargs)\n",
-                "  File \"C:\\Users\\admin\\PycharmProjects\\hd_api\\Run\\run_case_test.py\", line 38, in test_main_case1\n    res = base_request.run_main(method, url, data1, header).json()\n",
-                "  File \"C:\\Users\\admin\\PycharmProjects\\hd_api\\Base\\base_request.py\", line 26, in run_main\n    url=base_url +url\n",
-                "TypeError: unsupported operand type(s) for +: 'NoneType' and 'str'\n"
+                "  File \"C:\\Users\\admin\\PycharmProjects\\hd_api\\Run\\test_user.py\", line 34, in test_verify_phone\n    self.assertEqual(res[\"code\"], 1)\n",
+                "  File \"C:\\soft\\python\\lib\\unittest\\case.py\", line 831, in assertEqual\n    assertion_func(first, second, msg=msg)\n",
+                "  File \"C:\\soft\\python\\lib\\unittest\\case.py\", line 824, in _baseAssertEqual\n    raise self.failureException(msg)\n",
+                "AssertionError: 0 != 1\n"
             ]
         },
         {
-            "className": "TestRunCaseDdt",
-            "methodName": "test_main_case1_2___yiqcase_002____我的收藏____yes____yiqcase_001_data_token____token_____user_api_v1_favorite_page____get____token_xdclasseyJhbGciOiJIUzI1NiJ9_eyJzdWIiOiJ4ZGNsYXNzIiwicm9sZXMiOiIxIiwiaW1nIjoiaHR0cHM6Ly94ZC12aWRlby1wYy1pbWcub3NzLWNuLWJlaWppbmcuYWxpeXVuY3MuY29tL3hkY2xhc3NfcHJvL2RlZmF1bHQvaGVhZF9pbWcvMTMuanBlZyIsImlkIjo2Nzg3MTk1LCJuYW1lIjoiaGVkeSIsImlhdCI6MTYzMDA3MzMyOCwiZXhwIjoxNjMwNjc4MTI4fQ_Y_thcqFhZixXipqJmTQqIQrSHwRyfdGisLD3Nf3Oc5Y____no____no____code___0___失败______code____1___msg____登录过期_重新登录____",
+            "className": "Test_Verify_Code",
+            "methodName": "test_verify_phone_2",
             "description": null,
-            "spendTime": "0.0389 s",
-            "status": "错误",
+            "spendTime": "0.144 s",
+            "status": "失败",
             "log": [
-                "没有获取到值\n",
+                "======开始执行测试用例======\n======执行测试用例结束======\n",
                 "Traceback (most recent call last):\n",
                 "  File \"C:\\soft\\python\\lib\\unittest\\case.py\", line 59, in testPartExecutor\n    yield\n",
                 "  File \"C:\\soft\\python\\lib\\unittest\\case.py\", line 593, in run\n    self._callTestMethod(testMethod)\n",
                 "  File \"C:\\soft\\python\\lib\\unittest\\case.py\", line 550, in _callTestMethod\n    method()\n",
                 "  File \"C:\\soft\\python\\lib\\site-packages\\ddt.py\", line 191, in wrapper\n    return func(self, *args, **kwargs)\n",
-                "  File \"C:\\Users\\admin\\PycharmProjects\\hd_api\\Run\\run_case_test.py\", line 38, in test_main_case1\n    res = base_request.run_main(method, url, data1, header).json()\n",
-                "  File \"C:\\Users\\admin\\PycharmProjects\\hd_api\\Base\\base_request.py\", line 26, in run_main\n    url=base_url +url\n",
-                "TypeError: unsupported operand type(s) for +: 'NoneType' and 'str'\n"
+                "  File \"C:\\Users\\admin\\PycharmProjects\\hd_api\\Run\\test_user.py\", line 34, in test_verify_phone\n    self.assertEqual(res[\"code\"], 1)\n",
+                "  File \"C:\\soft\\python\\lib\\unittest\\case.py\", line 831, in assertEqual\n    assertion_func(first, second, msg=msg)\n",
+                "  File \"C:\\soft\\python\\lib\\unittest\\case.py\", line 824, in _baseAssertEqual\n    raise self.failureException(msg)\n",
+                "AssertionError: -1 != 1\n"
             ]
         },
         {
-            "className": "TestRunCaseDdt",
-            "methodName": "test_main_case1_3___yiqcase_003____已购买课程____yes____yiqcase_001_data_token____token_____user_api_v1_order_find_orders____get____token_xdclasseyJhbGciOiJIUzI1NiJ9_eyJzdWIiOiJ4ZGNsYXNzIiwicm9sZXMiOiIxIiwiaW1nIjoiaHR0cHM6Ly94ZC12aWRlby1wYy1pbWcub3NzLWNuLWJlaWppbmcuYWxpeXVuY3MuY29tL3hkY2xhc3NfcHJvL2RlZmF1bHQvaGVhZF9pbWcvMTMuanBlZyIsImlkIjo2Nzg3MTk1LCJuYW1lIjoiaGVkeSIsImlhdCI6MTYzMDA3MzMyOCwiZXhwIjoxNjMwNjc4MTI4fQ_Y_thcqFhZixXipqJmTQqIQrSHwRyfdGisLD3Nf3Oc5Y____write____no____json___None___失败______code____1___msg____登录过期_重新登录____",
+            "className": "Test_Verify_Code",
+            "methodName": "test_verify_phone_3",
             "description": null,
-            "spendTime": "0.0399 s",
-            "status": "错误",
+            "spendTime": "0.0 s",
+            "status": "成功",
             "log": [
-                "没有获取到值\n",
-                "Traceback (most recent call last):\n",
-                "  File \"C:\\soft\\python\\lib\\unittest\\case.py\", line 59, in testPartExecutor\n    yield\n",
-                "  File \"C:\\soft\\python\\lib\\unittest\\case.py\", line 593, in run\n    self._callTestMethod(testMethod)\n",
-                "  File \"C:\\soft\\python\\lib\\unittest\\case.py\", line 550, in _callTestMethod\n    method()\n",
-                "  File \"C:\\soft\\python\\lib\\site-packages\\ddt.py\", line 191, in wrapper\n    return func(self, *args, **kwargs)\n",
-                "  File \"C:\\Users\\admin\\PycharmProjects\\hd_api\\Run\\run_case_test.py\", line 38, in test_main_case1\n    res = base_request.run_main(method, url, data1, header).json()\n",
-                "  File \"C:\\Users\\admin\\PycharmProjects\\hd_api\\Base\\base_request.py\", line 26, in run_main\n    url=base_url +url\n",
-                "TypeError: unsupported operand type(s) for +: 'NoneType' and 'str'\n"
+                "======开始执行测试用例======",
+                "======执行测试用例结束======",
+                ""
             ]
         }
     ],
     "testName": "自动化测试报告",
     "testAll": 3,
-    "testFail": 3,
-    "beginTime": "2022-07-21 10:13:12",
+    "testFail": 2,
+    "beginTime": "2022-07-21 17:11:57",
     "totalTime": "1s",
     "testSkip": 0,
     "testError": 0

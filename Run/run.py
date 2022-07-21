@@ -6,9 +6,10 @@ import unittest
 from Base import HTMLTestRunner
 from Base.HTMLYY import HTMLTestRunner
 from Run.test_user import Test_Verify_Code
+from BeautifulReport import BeautifulReport
 import time
 if __name__ == '__main__':
-    suite =unittest.TestSuite()
+    """suite =unittest.TestSuite()
     suite.addTests(unittest.TestLoader().loadTestsFromTestCase(Test_Verify_Code))
     #suite.addTests(TestUserLogin("test_01case"))
     #suite.addTests(tests)
@@ -23,4 +24,10 @@ if __name__ == '__main__':
                                 verbosity=2,
 
                                 )
-               runner.run(suite)
+               runner.run(suite)"""
+    case_path = "C:/Users/admin/PycharmProjects/hd_api/Run"
+    report_path = "C:/Users/admin/PycharmProjects/hd_api/Report"
+    discover = unittest.defaultTestLoader.discover(case_path, pattern="test_user.py")
+    result = BeautifulReport(discover)
+    result.report(filename='测试报告', description='自动化测试报告', report_dir=report_path,
+                 theme='theme_default')

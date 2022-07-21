@@ -25,7 +25,13 @@ class Test_Verify_Code(unittest.TestCase):
         url = data2["url"]
         data = data2["data"]
         header = get_header()
-        res = base_request.run_main(method, url, data, header).json()
-        self.assertEqual(res["code"], 1)
+        is_run=data2["是否执行"]
+        is_header=data2["header操作"]
+        if is_run == 'yes':
+            if is_header == 'yes':
+                header = get_header()
+            res = base_request.run_main(method, url, data, header).json()
+            self.assertEqual(res["code"], 1)
+       # print(data2["是否执行"])
 
 
