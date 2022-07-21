@@ -16,24 +16,51 @@ from BeautifulReport import BeautifulReport
 data = excel_data.get_excel_data()
 #print(data)
 @ddt.ddt
-class TestRunCaseDdt(unittest.TestCase):
+class TestRunCase(unittest.TestCase):
     @ddt.data(*data)
-    def test_main_case(self, data):
-       print(data)
+    def test_main_case1(self, data):
+       res=None
+       #print(data)
        header = None
        # data = excel_data.get_rows_value(i + 2)   #使用ddt，就不需要获取这个data了
        is_run = data[2]  # 是否执行
        case_id = data[7]  # 获取case_id编辑
        line_num = excel_data.get_row_number(case_id)  # 通过case_id 获取行号；结果回写的时候就需要这个
-       print(is_run)
-       print(case_id)
+       """if is_run == 'yes':
+           #print(is_run)
+           #print(data[3])
+           method = data[6]
+           url = data[5]
+           is_header = data[9]
+           excepect_method = data[10]
+           excepect_result = data[11]
+           data1 = data[7]
+           condition = data[3]
+           if is_header == 'yes':
+               header = get_header()
+           res = base_request.run_main(method, url, data1, header).json()
+           self.assertEqual(res["code"],1)"""
+       if is_run == 'yes':
+           data1 = data[7]
+           # data1 = json.loads(data[7])  #将data数据转成dict格式
+           is_depend = data[3]
+           # 获取依赖数据
+           if is_depend:  # 如果有依赖数据
+               depend_key = data[4]  # 依赖的值
+               depend_data = get_data(is_depend)  # 依赖数据：将前置条件赋值给依赖数据
+               depend_data = depend_data[0]  # 最终依赖的数据
+                   # data1[depend_key] = depend_data    #这个主要目前也是提取，但是目前报错，待处理。
+               method = data[6]
+               url = data[5]
+               is_header = data[9]
+               excepect_method = data[10]
+               excepect_result = data[11]
+               condition = data[3]
+               if condition:
+                   pass
+               if is_header == 'yes':
+                   header = get_header()
+               res = base_request.run_main(method, url, data1, header).json()
+               self.assertEqual(res["code"], 1)
 if __name__ == '__main__':
-    #tt=TestRunCaseDdt()
-   # tt.test_main_case()
-    case_path = path + "/hd_api/Run"
-    report_path = path + "/hd_api/Report/report2.html"
-    discover = unittest.defaultTestLoader.discover("C:/Users/admin/PycharmProjects/hd_api/Run", pattern="run_case_test.py")
-    #test_suite = unittest.defaultTestLoader.discover('E:\pythonJIAO\test1\jiekou\scripts', pattern='jieko*.py')
-    result = BeautifulReport(discover)
-    result.report(filename='测试报告', description='自动化测试报告', report_dir= "C:/Users/admin/PycharmProjects/hd_api/report",
-                  theme='theme_default')
+     unittest.main()

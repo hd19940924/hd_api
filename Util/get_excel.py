@@ -4,8 +4,6 @@ base_path = os.getcwd()  #当前路径
 path = os.path.abspath(os.path.dirname(os.getcwd()))  #上级路径
 
 class GetExcel:
-
-
     #加载excel： 需要路径，告知哪里的excel
     def load_excel(self):
         #excel = openpyxl.load_workbook(path+'/Case/testcase.xlsx')
@@ -74,15 +72,12 @@ class GetExcel:
 
 excel_data = GetExcel()
 
-if __name__ == '__main__':
+"""if __name__ == '__main__':
     excel_data = GetExcel()
     print(excel_data.load_excel())
     print(excel_data.get_sheet_data(index=None))
-
     print(excel_data.get_rows_value(2))
     data = excel_data.get_rows_value(1 + 2)
     is_run = data[7]
     print(is_run)
-    print(excel_data.get_rows())
-    data1=excel_data.get_excel_data()
-    print(data1[2])
+    print(excel_data.get_rows())"""

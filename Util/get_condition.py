@@ -3,9 +3,9 @@ sys.path.append("D:/yiq/Demo")
 import json
 
 from jsonpath_rw import parse
-from Util.get_excel import excel_data
+from Util.get_excel import GetExcel#excel_data
 
-
+excel_data = GetExcel()
 def split_data(data):
     #拆分单元格数据
     case_id = data.split(">")[0]

@@ -12,7 +12,7 @@ path = os.path.abspath(os.path.dirname(os.getcwd()))  #上级路径
 from Util.get_excel import excel_data
 from Base.base_request import base_request
 
-data = excel_data.get_excel_data()
+data =excel_data.get_excel_data()
 print(data)
 
 @ddt.ddt

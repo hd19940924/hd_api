@@ -22,7 +22,8 @@ class BaseRequests:
         #通过封装读取server配置后，拼接url
         base_url = server_data.get_value('host') #获取host
         if 'http' not in url:   #如果原来url中没有http，那么新的url = host+url
-            url = base_url + str(url)
+           # url = base_url + str(url)
+            url=base_url +url
 
         if method =='get':
             res = self.send_get(url, data, header)
